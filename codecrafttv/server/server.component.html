@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-lg-12">
+        <p
+            [ngStyle]="{backgroundColor: getColor()}"
+            [ngClass]="{online: serverStatus === 'online'}"
+            >
+            {{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }}
+        </p>
+
+        <div> Months :
+            <select (change)="changemonths($event)">
+                <option *ngFor="let i of months">{{i}}</option>
+            </select>
+        </div>
+        <br>
+
+        <div>
+            <span *ngIf="isAvailable; then condition1 else condition2"></span>
+            <ng-template #condition1>Condition is valid</ng-template>
+            <ng-template #condition2>Condition is invalid</ng-template>
+        </div>
+        <br>
+
+        <button (click)="myClickFunction($event)" class="btn badge-success">
+            Click Me
+        </button>
+    </div>
+</div>
