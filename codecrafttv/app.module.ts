@@ -23,6 +23,8 @@ import { NgStyleExampleComponent } from './ng-style-example/ng-style-example.com
 import { NgClassExampleComponent } from './ng-class-example/ng-class-example.component';
 import { NgNonBindableExampleComponent } from './ng-non-bindable-example/ng-non-bindable-example.component';
 import { NgForExampleComponent } from './ng-for-example/ng-for-example.component';
+import { CardHoverDirective } from './custom-directive/card-hover.directive';
+import { RolloverImageDirective } from './rollover-img/rollover-image.directive';
 
 @NgModule({
     declarations: [
@@ -45,7 +47,9 @@ import { NgForExampleComponent } from './ng-for-example/ng-for-example.component
         NgStyleExampleComponent,
         NgClassExampleComponent,
         NgNonBindableExampleComponent,
-        NgForExampleComponent
+        NgForExampleComponent,
+        CardHoverDirective,
+        RolloverImageDirective
     ],
     imports: [
         BrowserModule,
