@@ -25,11 +25,23 @@ export class CardHoverDirective implements OnInit {
     @HostBinding('style.border')
     borderColor: string;
 
-    constructor(private el: ElementRef, private renderer: Renderer2) {
-        // renderer.setStyle(el.nativeElement, 'backgroundColor', 'gray');
-    }
+    constructor(private el: ElementRef, private renderer: Renderer2) {}
 
     ngOnInit(): void {
+        // this.renderer.setStyle(el.nativeElement, 'background-color', 'gray');
+        // this.renderer.removeStyle(this.el.nativeElement, 'border-left');
+
+        // this.renderer.setAttribute(this.el.nativeElement, 'aria-hidden', 'true');
+
+        // this.renderer.addClass(this.el.nativeElement, 'wild');
+        // this.renderer.removeClass(this.el.nativeElement, 'wild');
+
+        // const div = this.renderer.createElement('div');
+        // const text = this.renderer.createText('Hello world!');
+        //
+        // this.renderer.appendChild(div, text);
+        // this.renderer.appendChild(this.el.nativeElement, div);
+
         this.borderColor = '1px solid #ccc';
     }
 

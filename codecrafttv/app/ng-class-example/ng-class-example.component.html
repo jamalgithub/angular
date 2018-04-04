@@ -1,9 +1,9 @@
 <h4>NgClass</h4>
 <ul *ngFor="let person of people">
     <li [ngClass]="{
-        'text-success':person.country === 'UK',
-        'text-primary':person.country === 'USA',
-        'text-danger':person.country === 'HK'
+        'text-success': person.country === 'UK',
+        'text-primary': person.country === 'USA',
+        'text-danger': person.country === 'HK'
     }">
         {{ person.name }} ({{ person.country }})
     </li>
