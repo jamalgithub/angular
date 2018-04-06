@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+            <ul class="nav nav-tabs">
+                <!--the directive routerLinkActive binding add the given class name to the currently active route-->
+                <li role="presentation" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                    <!--the directive routerLink binding instead of the href attribute to point to specific routes-->
+                    <a routerLink="/">Home</a>
+                </li>
+                <li role="presentation" routerLinkActive="active">
+                    <a routerLink="servers">Servers</a>
+                </li>
+                <li role="presentation" routerLinkActive="active">
+                    <a [routerLink]="['users']">Users</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+            <!--directive tag where the routing should be rendered-->
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
+
