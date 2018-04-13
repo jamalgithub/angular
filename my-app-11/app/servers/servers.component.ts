@@ -11,6 +11,12 @@ export class ServersComponent implements OnInit {
 
     private servers: { id: number, name: string, status: string }[] = [];
 
+    /**
+     *
+     * @param {ServersService} serversService
+     * @param {Router} router
+     * @param {ActivatedRoute} route The activatedRoute give us access to the params passed in the URL
+     */
     constructor(private serversService: ServersService, private router: Router, private route: ActivatedRoute) {
     }
 
