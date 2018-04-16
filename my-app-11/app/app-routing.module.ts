@@ -23,6 +23,9 @@ const appRoutes: Routes = [
         canActivateChild: [AuthGuardService],
         component: ServersComponent,
         children: [
+            // resolver is an intermediate code, which can be executed when a link has been clicked and before a component is loaded
+            // the ServerComponent is loaded after resolving this route.
+            // the result of the resolver will be added to data and will be accessed as data['server'] in our case
             { path: ':id', component: ServerComponent, resolver: {server: ServerResolverService} },
             { path: ':id/edit', component: EditServerComponent, canDeactivate: [CanDeactivateGuardService] }
         ]
